@@ -190,7 +190,7 @@ ApexApp.initGallery = function initGallery() {
       </div>
       <div class="gallery-overlay">
         <h4 class="text-white font-semibold text-sm">${item.title}</h4>
-        <p class="text-gray-300 text-xs mt-0.5">${item.desc}</p>
+        <p class="gallery-desc text-gray-300 text-xs mt-0.5">${item.desc}</p>
       </div>
     `;
     div.addEventListener("click", () => openLightbox(item));
