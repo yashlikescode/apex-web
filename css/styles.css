@@ -568,7 +568,7 @@ body {
 .why-number {
   font-size: 3.5rem;
   font-weight: 900;
-  color: rgba(26, 86, 219, 0.1);
+  color: rgba(26, 86, 219, 0.5);
   line-height: 1;
   margin-bottom: 0.5rem;
   font-variant-numeric: tabular-nums;
