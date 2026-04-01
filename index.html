@@ -958,13 +958,20 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- ISO -->
-          <div class="cert-card reveal stagger-1">
-            <div class="cert-badge-icon">
+        <!-- Test Reports Comparison Table -->
+        <!-- ── Certificate Directory Table ── -->
+        <div class="cert-dir-wrap reveal mt-10">
+          <!-- Tab bar -->
+          <div class="cert-dir-tabs" role="tablist">
+            <button
+              class="cert-dir-tab active"
+              data-tab="quality"
+              role="tab"
+              aria-selected="true"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-7 h-7 text-orange-400"
+                class="w-4 h-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -976,46 +983,41 @@
                   d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                 />
               </svg>
-            </div>
-            <h3 class="text-white font-bold text-xl mb-1">ISO 9001:2015</h3>
-            <p class="text-sm font-medium mb-4" style="color: var(--orange)">
-              Quality Management System
-            </p>
-            <div class="space-y-1 mb-5">
-              <div class="cert-detail-item">
-                <strong>Certified by:</strong> UQSR Global Pvt. Ltd.
-              </div>
-              <div class="cert-detail-item">
-                <strong>Cert No:</strong> UQSR-3150-AM
-              </div>
-              <div class="cert-detail-item">
-                <strong>Scope:</strong> Manufacturing & Sales of Control Panels,
-                Electrical Switchgear
-              </div>
-              <div class="cert-detail-item">
-                <strong>Valid Until:</strong> 28 Dec 2025
-              </div>
-              <div class="cert-detail-item">
-                <strong>IAF Code:</strong> 19, 29
-              </div>
-            </div>
-            <div
-              class="border-t pt-4"
-              style="border-color: rgba(255, 255, 255, 0.08)"
+              Quality &amp; Registrations
+              <span class="cert-dir-count">3</span>
+            </button>
+            <button
+              class="cert-dir-tab"
+              data-tab="partners"
+              role="tab"
+              aria-selected="false"
             >
-              <p class="text-xs" style="color: rgba(255, 255, 255, 0.5)">
-                Systematic quality control across all manufacturing and business
-                processes.
-              </p>
-            </div>
-          </div>
-
-          <!-- CPRI -->
-          <div class="cert-card reveal stagger-2">
-            <div class="cert-badge-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-7 h-7 text-orange-400"
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              Partner Certificates
+              <span class="cert-dir-count">5</span>
+            </button>
+            <button
+              class="cert-dir-tab"
+              data-tab="cpri"
+              role="tab"
+              aria-selected="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -1027,84 +1029,706 @@
                   d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
                 />
               </svg>
-            </div>
-            <h3 class="text-white font-bold text-xl mb-1">CPRI Testing</h3>
-            <p class="text-sm font-medium mb-4" style="color: var(--orange)">
-              Central Power Research Institute
-            </p>
-            <div class="space-y-1 mb-5">
-              <div class="cert-detail-item"><strong>Test Reports:</strong></div>
-              <div class="cert-detail-item" style="padding-left: 0.5rem">
-                <strong>HV:</strong> CPRINOAHV22T0171
-              </div>
-              <div class="cert-detail-item" style="padding-left: 0.5rem">
-                <strong>Misc:</strong> CPRINOAHVMISC22T0170
-              </div>
-              <div class="cert-detail-item" style="padding-left: 0.5rem">
-                <strong>BPL:</strong> CPRIBPLSTNBMISC22T0128
-              </div>
-              <div class="cert-detail-item">
-                <strong>Standard:</strong> IS/IEC 61439-1&amp;2:2011
-              </div>
-            </div>
-            <div
-              class="border-t pt-4"
-              style="border-color: rgba(255, 255, 255, 0.08)"
-            >
-              <p class="text-xs" style="color: rgba(255, 255, 255, 0.5)">
-                Tests include short-circuit withstand, temperature rise, and IP
-                ingress protection.
-              </p>
-            </div>
+              CPRI Test Reports
+              <span class="cert-dir-count">7</span>
+            </button>
           </div>
 
-          <!-- Standards & Compliance -->
-          <div class="cert-card reveal stagger-3">
-            <div class="cert-badge-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-7 h-7 text-orange-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                />
-              </svg>
+          <!-- Tab panels -->
+          <div class="cert-dir-body">
+            <!-- Quality & Registrations -->
+            <div class="cert-dir-panel active" data-panel="quality">
+              <table class="cert-dir-table">
+                <thead>
+                  <tr>
+                    <th>Certificate</th>
+                    <th>Issued By</th>
+                    <th>Reference No.</th>
+                    <th>Valid Until</th>
+                    <th>Document</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot quality"></span>
+                        ISO 9001:2015
+                      </div>
+                      <div class="cert-dir-sub">Quality Management System</div>
+                    </td>
+                    <td>UQSR Global Pvt. Ltd.</td>
+                    <td><code class="cert-dir-code">UQSR-4226-AM</code></td>
+                    <td>
+                      <span class="cert-dir-validity valid">20 Jan 2028</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/ISO_9001_-_APEX_MARKETING_1_.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot quality"></span>
+                        SIEPAN Elite Licensed Partner
+                      </div>
+                      <div class="cert-dir-sub">
+                        LV Switchboard Manufacturing — IEC 61439-1&amp;2:2020
+                      </div>
+                    </td>
+                    <td>Siemens Limited</td>
+                    <td><code class="cert-dir-code">FY 2025–26</code></td>
+                    <td>
+                      <span class="cert-dir-validity valid">30 Sep 2026</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/SIEPAN_Elite_certificate_Apex_Marketing_FY26.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot quality"></span>
+                        MSME / Udyam Registration
+                      </div>
+                      <div class="cert-dir-sub">
+                        Small Enterprise — Manufacturing, NIC 27104
+                      </div>
+                    </td>
+                    <td>Govt. of India, M/o MSME</td>
+                    <td>
+                      <code class="cert-dir-code">UDYAM-JH-06-0002166</code>
+                    </td>
+                    <td>
+                      <span class="cert-dir-validity valid">Ongoing</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/msme.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <h3 class="text-white font-bold text-xl mb-1">
-              Standards & Compliance
-            </h3>
-            <p class="text-sm font-medium mb-4" style="color: var(--orange)">
-              Additional Certifications
-            </p>
-            <div class="space-y-1 mb-5">
-              <div class="cert-detail-item">
-                <strong>IEC 61439:</strong> Compliant panel designs
-              </div>
-              <div class="cert-detail-item">
-                <strong>BIS Adherence:</strong> Bureau of Indian Standards
-              </div>
-              <div class="cert-detail-item">
-                <strong>Environmental:</strong> Safety compliance
-              </div>
-              <div class="cert-detail-item">
-                <strong>Electrical Safety:</strong> Regulations compliance
-              </div>
+
+            <!-- Partner Certificates -->
+            <div class="cert-dir-panel" data-panel="partners">
+              <table class="cert-dir-table">
+                <thead>
+                  <tr>
+                    <th>Certificate</th>
+                    <th>Issued By</th>
+                    <th>Scope</th>
+                    <th>Valid Until</th>
+                    <th>Document</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot partner"></span>
+                        Authorised Business Partner
+                      </div>
+                      <div class="cert-dir-sub">Low Voltage AC Drives</div>
+                    </td>
+                    <td>Yaskawa India Pvt. Ltd.</td>
+                    <td>Distributor &amp; System Integrator</td>
+                    <td>
+                      <span class="cert-dir-validity valid">31 Mar 2026</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/yaskawa.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot partner"></span>
+                        Channel Partner Certificate
+                      </div>
+                      <div class="cert-dir-sub">
+                        Power Distribution &amp; Control Products
+                      </div>
+                    </td>
+                    <td>Eaton Power Quality Pvt. Ltd.</td>
+                    <td>Channel Partner &amp; System Integrator</td>
+                    <td>
+                      <span class="cert-dir-validity expired">31 Dec 2025</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/03-EATON-_DEALER_CERTIFICATE-2025.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot partner"></span>
+                        Certificate of Authorisation
+                      </div>
+                      <div class="cert-dir-sub">
+                        Automation &amp; Electrical Standard Products
+                      </div>
+                    </td>
+                    <td>Lauritz Knudsen (L&amp;T)</td>
+                    <td>Authorised Integrated Solution Provider</td>
+                    <td>
+                      <span class="cert-dir-validity expired">31 Dec 2025</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/04-LK-_ISP_CERTIFICATE.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot partner"></span>
+                        Certificate of Authorization
+                      </div>
+                      <div class="cert-dir-sub">Entire Product Range</div>
+                    </td>
+                    <td>WAGO Private Limited</td>
+                    <td>Authorised Channel Partner</td>
+                    <td>
+                      <span class="cert-dir-validity expired">31 Dec 2025</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/06-WAGO-_CHANNEL_PARTNER_CERTIFICATE.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot partner"></span>
+                        Authorised Dealer Certificate
+                      </div>
+                      <div class="cert-dir-sub">LV Components Range</div>
+                    </td>
+                    <td>C&amp;S Electric Limited</td>
+                    <td>Authorised Dealer — Ref: REF/CERT/24-25/011</td>
+                    <td>
+                      <span class="cert-dir-validity expired">30 Sep 2025</span>
+                    </td>
+                    <td>
+                      <a
+                        href="certificates/07-C_S-_DEALER_CERTIFICATE.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div
-              class="border-t pt-4"
-              style="border-color: rgba(255, 255, 255, 0.08)"
+
+            <!-- CPRI Test Reports -->
+            <div class="cert-dir-panel" data-panel="cpri">
+              <table class="cert-dir-table">
+                <thead>
+                  <tr>
+                    <th>Report No.</th>
+                    <th>Panel / Sample Tested</th>
+                    <th>Test Conducted</th>
+                    <th>Standard</th>
+                    <th>Date</th>
+                    <th>Document</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="cert-dir-code">CPRINOAHV22T0171</code></td>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot cpri"></span>415V, 4000A LT
+                        Panel
+                      </div>
+                      <div class="cert-dir-sub">
+                        Main Distribution Panel — APEX/40TR
+                      </div>
+                    </td>
+                    <td>Temperature Rise</td>
+                    <td>
+                      <span class="cert-dir-std"
+                        >IS/IEC 61439-1&amp;2:2011</span
+                      >
+                    </td>
+                    <td>27 Apr 2022</td>
+                    <td>
+                      <a
+                        href="certificates/CPRI_TEMP_RIES-1.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code class="cert-dir-code">CPRINOAHVMISC22T0170</code>
+                    </td>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot cpri"></span>415V, 250A
+                        Outdoor LT Panel
+                      </div>
+                      <div class="cert-dir-sub">Outdoor Panel — APEX/55IP</div>
+                    </td>
+                    <td>IP Ingress Protection &amp; Misc.</td>
+                    <td>
+                      <span class="cert-dir-std"
+                        >IS/IEC 61439-1&amp;2:2011</span
+                      >
+                    </td>
+                    <td>27 Apr 2022</td>
+                    <td>
+                      <a
+                        href="certificates/CPRI_IP_TEST-1.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code class="cert-dir-code">CPRIBPLSTNBMISC22T0128</code>
+                    </td>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot cpri"></span>415V, 6000A LT
+                        Panel (PCC)
+                      </div>
+                      <div class="cert-dir-sub">
+                        Power Cum Motor Control Centre — APEX/70k
+                      </div>
+                    </td>
+                    <td>Short Circuit Withstand Strength</td>
+                    <td>
+                      <span class="cert-dir-std"
+                        >IS/IEC 61439-1&amp;2:2011</span
+                      >
+                    </td>
+                    <td>23 May 2022</td>
+                    <td>
+                      <a
+                        href="certificates/CPRI_SHORT_CKT-1.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code class="cert-dir-code">CPRIBPLSTNC25T0176</code>
+                    </td>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot cpri"></span>415V, 1600A LT
+                        Distribution Panel
+                      </div>
+                      <div class="cert-dir-sub">
+                        1600A LT PDB — AM/LT/2502/2024-25
+                      </div>
+                    </td>
+                    <td>Mechanical Impact (IK08)</td>
+                    <td>
+                      <span class="cert-dir-std">IEC 61439-1&amp;2:2020</span>
+                    </td>
+                    <td>26 May 2025</td>
+                    <td>
+                      <a
+                        href="certificates/TEST_REPORT_PDF.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code class="cert-dir-code">CPRIBPLSTNC25T0251</code>
+                    </td>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot cpri"></span>415V, 1600A LT
+                        Distribution Panel
+                      </div>
+                      <div class="cert-dir-sub">
+                        1600A LT PDB — AM/LT/2502/2024-25
+                      </div>
+                    </td>
+                    <td>Mechanical Operation, Marking, Lifting, Clearances</td>
+                    <td>
+                      <span class="cert-dir-std">IEC 61439-1&amp;2:2020</span>
+                    </td>
+                    <td>02 Jul 2025</td>
+                    <td>
+                      <a
+                        href="certificates/water_complex_tec.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code class="cert-dir-code">CPRIBPLSTNC25T0252</code>
+                    </td>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot cpri"></span>415V, 1600A LT
+                        Panel — Insulating Materials
+                      </div>
+                      <div class="cert-dir-sub">
+                        FRP sheet &amp; Polyamide Hexagonal Insulator (M16)
+                      </div>
+                    </td>
+                    <td>Resistance to Abnormal Heat &amp; Fire</td>
+                    <td>
+                      <span class="cert-dir-std">IEC 61439-1&amp;2:2020</span>
+                    </td>
+                    <td>26 Jun 2025</td>
+                    <td>
+                      <a
+                        href="certificates/CPRI_SHORT_CKT-1.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code class="cert-dir-code">CPRIBPLSTNC25T0368</code>
+                    </td>
+                    <td>
+                      <div class="cert-dir-name">
+                        <span class="cert-dir-dot cpri"></span>415V, 1600A LT
+                        Distribution Panel
+                      </div>
+                      <div class="cert-dir-sub">
+                        Outdoor — AM/LT/2502/2024-25
+                      </div>
+                    </td>
+                    <td>
+                      Dielectric Properties (Impulse &amp; Power Frequency
+                      Withstand)
+                    </td>
+                    <td>
+                      <span class="cert-dir-std">IEC 61439-1&amp;2:2020</span>
+                    </td>
+                    <td>22 Oct 2025</td>
+                    <td>
+                      <a
+                        href="certificates/CPRI_IP_TEST-1.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="cert-dir-btn"
+                      >
+                        View PDF
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- /cert-dir-body -->
+
+          <div class="cert-dir-footer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 text-orange-400 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <p class="text-xs italic" style="color: rgba(255, 255, 255, 0.5)">
-                "Every product leaving our facility is backed by international
-                certifications and rigorous testing protocols."
-              </p>
-            </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p>
+              All certificates and test reports are available on request. CPRI
+              tests conducted at accredited government laboratories.
+            </p>
           </div>
         </div>
       </div>
