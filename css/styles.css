@@ -1153,3 +1153,167 @@ footer {
     font-size: 0.76rem;
   }
 }
+
+
+
+
+/* ---- Partner logo image wrappers (replaces text badges) ---- */
+.partner-logo-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 56px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  width: fit-content;
+  min-width: 160px;
+  max-width: 240px;
+}
+
+.partner-logo-img {
+  max-height: 38px;
+  max-width: 200px;
+  width: auto;
+  object-fit: contain;
+  filter: none;
+  transition: filter 0.2s ease;
+}
+
+.partner-card:hover .partner-logo-img {
+  filter: brightness(1.05);
+}
+
+
+/* ---- Component partner logo grid ---- */
+.component-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .component-logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .component-logo-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.component-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 10px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: default;
+}
+
+.component-logo-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.component-logo-item img {
+  height: 36px;
+  max-width: 100px;
+  width: auto;
+  object-fit: contain;
+  /* Normalise dark/coloured backgrounds to transparent look */
+  mix-blend-mode: multiply;
+}
+
+.component-logo-item span {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+
+/* ---- Trusted Clients Marquee ---- */
+.clients-marquee-outer {
+  overflow: hidden;
+  width: 100%;
+  /* Fade edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.clients-marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+
+.clients-marquee-outer:hover .clients-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.client-logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 80px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.client-logo-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(249, 115, 22, 0.35);
+}
+
+.client-logo-item img {
+  max-height: 48px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  /* Make all logos appear light/white against dark background */
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.client-logo-item:hover img {
+  opacity: 1;
+  filter: brightness(0) invert(1) sepia(1) saturate(0.5) hue-rotate(0deg);
+}
+
