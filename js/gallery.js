@@ -1,215 +1,204 @@
 /**
- * gallery.js — Gallery tabs, filtering, and lightbox
+ * gallery.js - Section-based gallery rendering and lightbox
  */
 
 window.ApexApp = window.ApexApp || {};
 
-const GALLERY_DATA = [
-  // Manufacturing Facility
+const GALLERY_SECTIONS = [
   {
-    category: "facility",
-    title: "Manufacturing Floor",
-    desc: "State-of-the-art assembly & wiring bay",
-    icon: "🏭",
-    color: "#1E3A5F",
-    accent: "#3B82F6",
+    id: "featured",
+    label: "Featured Panels",
+    eyebrow: "Core Portfolio",
+    description:
+      "A quick view of some of Apex Marketing's panel types and completed assemblies.",
+    accent: "orange",
+    images: [
+      { src: "gallery/starters.jpg", title: "Starters Panel" },
+      { src: "gallery/pmcc.jpeg", title: "PMCC Panel" },
+      { src: "gallery/apfc.jpeg", title: "APFC Panel" },
+      { src: "gallery/ldb.jpeg", title: "LDB Panel" },
+      { src: "gallery/mcc.jpeg", title: "MCC Panel" },
+    ],
   },
   {
-    category: "facility",
-    title: "Quality Testing Lab",
-    desc: "In-house testing & inspection area",
-    icon: "🔬",
-    color: "#1B3A5C",
-    accent: "#60A5FA",
+    id: "pcc",
+    label: "PCC Panels",
+    eyebrow: "Power Control Centre",
+    description:
+      "Power control centre builds for industrial distribution and feeder management.",
+    accent: "blue",
+    images: [
+      { src: "gallery/pcc/pcc panel.jpg", title: "PCC Panel" },
+      { src: "gallery/pcc/pcc-1.jpg", title: "PCC Panel View 1" },
+      { src: "gallery/pcc/pcc-2.jpg", title: "PCC Panel View 2" },
+      { src: "gallery/pcc/pcc-5.jpeg", title: "PCC Lineup" },
+      { src: "gallery/pcc/pcc.jpeg", title: "PCC Assembly" },
+      { src: "gallery/pcc/pcc6.jpeg", title: "PCC Shop Floor View" },
+    ],
   },
   {
-    category: "facility",
-    title: "Design & Engineering",
-    desc: "CAD-driven panel design workspace",
-    icon: "📐",
-    color: "#162F4A",
-    accent: "#93C5FD",
-  },
-  // Control Panels
-  {
-    category: "control",
-    title: "PLC Control Panel",
-    desc: "Custom PLC panel for industrial automation",
-    icon: "⚡",
-    color: "#1A2E4A",
-    accent: "#F97316",
-  },
-  {
-    category: "control",
-    title: "Motor Control Centre",
-    desc: "MCC panel – 415V, multi-feeder configuration",
-    icon: "🔧",
-    color: "#1E3550",
-    accent: "#FB923C",
+    id: "pdb",
+    label: "PDB Panels",
+    eyebrow: "Power Distribution Board",
+    description:
+      "Distribution board executions covering multiple enclosure layouts and feeder configurations.",
+    accent: "orange",
+    images: [
+      { src: "gallery/pdb/pdb.jpeg", title: "PDB Panel" },
+      { src: "gallery/pdb/pdb panel.jpg", title: "PDB Panel Front" },
+      { src: "gallery/pdb/pdb panel-1.jpg", title: "PDB Panel Detail" },
+      { src: "gallery/pdb/pdb 3.jpg", title: "PDB Assembly 3" },
+      { src: "gallery/pdb/pdb 7.jpeg", title: "PDB Assembly 7" },
+      { src: "gallery/pdb/pdb -5.jpeg", title: "PDB Assembly 5" },
+      { src: "gallery/pdb/pdb & mcc.jpeg", title: "PDB and MCC Setup" },
+    ],
   },
   {
-    category: "control",
-    title: "Automation Panel",
-    desc: "Integrated automation & SCADA-ready panel",
-    icon: "🖥️",
-    color: "#162D46",
-    accent: "#F97316",
-  },
-  // LT Panels
-  {
-    category: "lt",
-    title: "LT Main Distribution Panel",
-    desc: "Tested up to 415V, 6000A, IP54 rated",
-    icon: "⚙️",
-    color: "#1A3050",
-    accent: "#34D399",
+    id: "vfd",
+    label: "VFD Panels",
+    eyebrow: "Drive Systems",
+    description:
+      "Variable frequency drive panel installations designed for motor control and energy efficiency.",
+    accent: "blue",
+    images: [
+      { src: "gallery/vfd/vfd lineup.jpeg", title: "VFD Lineup" },
+      {
+        src: "gallery/vfd/VFD PANEL SREE - Copy - Copy.jpg",
+        title: "VFD Panel Cabinet",
+      },
+    ],
   },
   {
-    category: "lt",
-    title: "APFC Panel",
-    desc: "Automatic Power Factor Correction panel",
-    icon: "📊",
-    color: "#163048",
-    accent: "#6EE7B7",
+    id: "office",
+    label: "Office & Facility",
+    eyebrow: "Team and Workplace",
+    description:
+      "Photos from the Apex office and day-to-day working environment.",
+    accent: "orange",
+    images: [
+      { src: "gallery/office/IMG_9175.jpeg", title: "Office Interior 1" },
+      { src: "gallery/office/IMG_9177.jpeg", title: "Office Interior 2" },
+      { src: "gallery/office/IMG_9179.jpeg", title: "Office Interior 3" },
+      { src: "gallery/office/IMG_9180.jpeg", title: "Office Interior 4" },
+      { src: "gallery/office/IMG_9182.jpeg", title: "Office Interior 5" },
+      {
+        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.16.32.jpeg",
+        title: "Office Workspace 1",
+      },
+      {
+        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.16.33.jpeg",
+        title: "Office Workspace 2",
+      },
+      {
+        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.16.34 (1).jpeg",
+        title: "Office Workspace 3",
+      },
+      {
+        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.16.34.jpeg",
+        title: "Office Workspace 4",
+      },
+      {
+        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.16.35.jpeg",
+        title: "Office Workspace 5",
+      },
+      {
+        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.35.28.jpeg",
+        title: "Office Workspace 6",
+      },
+      {
+        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.35.28 (1).jpeg",
+        title: "Office Workspace 7",
+      },
+      {
+        src: "gallery/office/WhatsApp Image 2026-03-03 at 12.34.19.jpeg",
+        title: "Office Workspace 8",
+      },
+    ],
   },
-  {
-    category: "lt",
-    title: "Power Control Centre",
-    desc: "PCC with bus couplers & feeder compartments",
-    icon: "🔌",
-    color: "#183254",
-    accent: "#10B981",
-  },
-  // VFD Panels
-  {
-    category: "vfd",
-    title: "Yaskawa VFD Panel – 45kW",
-    desc: "Energy-efficient motor drive, IP42",
-    icon: "🌀",
-    color: "#1C2E50",
-    accent: "#A78BFA",
-  },
-  {
-    category: "vfd",
-    title: "Multi-Drive VFD Cabinet",
-    desc: "22kW–250kW configuration with bypass",
-    icon: "🔋",
-    color: "#19284C",
-    accent: "#C4B5FD",
-  },
-  // Installations
-  {
-    category: "install",
-    title: "Steel Plant Installation",
-    desc: "Complete switchgear room, JSR steel plant",
-    icon: "🏗️",
-    color: "#1B2E4C",
-    accent: "#FCD34D",
-  },
-  {
-    category: "install",
-    title: "Commercial Complex",
-    desc: "LT distribution panels, multi-storey building",
-    icon: "🏢",
-    color: "#172A48",
-    accent: "#FBBF24",
-  },
-  {
-    category: "install",
-    title: "Water Treatment Plant",
-    desc: "Outdoor panels and MCC, IP65 rated",
-    icon: "💧",
-    color: "#1A3050",
-    accent: "#38BDF8",
-  },
-];
-
-const TABS = [
-  { id: "all", label: "All Projects" },
-  { id: "facility", label: "Facility" },
-  { id: "control", label: "Control Panels" },
-  { id: "lt", label: "LT Panels" },
-  { id: "vfd", label: "VFD Panels" },
-  { id: "install", label: "Installations" },
 ];
 
 ApexApp.initGallery = function initGallery() {
-  const tabsContainer = document.getElementById("gallery-tabs");
-  const gridContainer = document.getElementById("gallery-grid");
+  const sectionsContainer = document.getElementById("gallery-sections");
   const lightbox = document.getElementById("lightbox");
   const lbTitle = document.getElementById("lb-title");
   const lbDesc = document.getElementById("lb-desc");
   const lbClose = document.getElementById("lb-close");
 
-  if (!tabsContainer || !gridContainer) return;
+  if (!sectionsContainer || !lightbox || !lbTitle || !lbDesc || !lbClose) {
+    return;
+  }
 
-  let activeTab = "all";
+  const lbMedia = lightbox.querySelector("#lightbox-content > div");
+  renderSections();
 
-  // Build tabs
-  TABS.forEach((tab) => {
-    const btn = document.createElement("button");
-    btn.className = `gallery-tab-btn${tab.id === "all" ? " active" : ""}`;
-    btn.textContent = tab.label;
-    btn.dataset.tab = tab.id;
-    btn.addEventListener("click", () => switchTab(tab.id));
-    tabsContainer.appendChild(btn);
-  });
+  function renderSections() {
+    sectionsContainer.innerHTML = "";
 
-  // Initial render
-  renderGallery("all");
+    GALLERY_SECTIONS.forEach((section) => {
+      const sectionEl = document.createElement("section");
+      sectionEl.className = "gallery-section-card";
+      sectionEl.innerHTML = `
+        <div class="gallery-section-head">
+          <div>
+            <p class="gallery-section-eyebrow">${section.eyebrow}</p>
+            <h3 class="gallery-section-title">${section.label}</h3>
+          </div>
+          <div class="gallery-section-meta">
+            <span class="gallery-section-count gallery-section-count-${section.accent}">
+              ${section.images.length} Photos
+            </span>
+            <p class="gallery-section-copy">${section.description}</p>
+          </div>
+        </div>
+        <div class="gallery-photo-grid"></div>
+      `;
 
-  function switchTab(tabId) {
-    activeTab = tabId;
-    tabsContainer.querySelectorAll(".gallery-tab-btn").forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.tab === tabId);
+      const grid = sectionEl.querySelector(".gallery-photo-grid");
+
+      section.images.forEach((image, index) => {
+        const photo = document.createElement("button");
+        photo.type = "button";
+        photo.className = "gallery-photo-card";
+        photo.setAttribute("aria-label", `Open ${image.title}`);
+        photo.style.animationDelay = `${index * 0.05}s`;
+        photo.innerHTML = `
+          <span class="gallery-photo-frame">
+            <img
+              src="${image.src}"
+              alt="${image.title}"
+              class="gallery-photo-image"
+              loading="lazy"
+            />
+            <span class="gallery-photo-overlay">
+              <span class="gallery-photo-label">${image.title}</span>
+            </span>
+          </span>
+        `;
+        photo.addEventListener("click", () => openLightbox(section, image));
+        grid.appendChild(photo);
+      });
+
+      sectionsContainer.appendChild(sectionEl);
     });
-    renderGallery(tabId);
   }
 
-  function renderGallery(filter) {
-    const items =
-      filter === "all"
-        ? GALLERY_DATA
-        : GALLERY_DATA.filter((item) => item.category === filter);
+  function openLightbox(section, image) {
+    lbTitle.textContent = image.title;
+    lbDesc.textContent = `${section.label} Gallery`;
 
-    gridContainer.innerHTML = "";
-    items.forEach((item, i) => {
-      const el = createGalleryItem(item, i);
-      gridContainer.appendChild(el);
-    });
-  }
+    if (lbMedia) {
+      lbMedia.innerHTML = "";
+      lbMedia.style.background = "transparent";
+      lbMedia.className = "lightbox-media";
 
-  function createGalleryItem(item, index) {
-    const div = document.createElement("div");
-    div.className = "gallery-item reveal";
-    div.style.transitionDelay = `${(index % 6) * 0.06}s`;
-    div.innerHTML = `
-      <div class="gallery-item-inner" style="background: linear-gradient(135deg, ${item.color}, #0A1628);">
-        <span style="font-size: 3rem; margin-bottom: 0.5rem;">${item.icon}</span>
-        <div style="width: 60%; height: 2px; background: ${item.accent}; border-radius: 4px; opacity: 0.5;"></div>
-      </div>
-      <div class="gallery-overlay">
-        <h4 class="text-white font-semibold text-sm">${item.title}</h4>
-        <p class="gallery-desc text-gray-300 text-xs mt-0.5">${item.desc}</p>
-      </div>
-    `;
-    div.addEventListener("click", () => openLightbox(item));
+      const img = document.createElement("img");
+      img.src = image.src;
+      img.alt = image.title;
+      img.className = "lightbox-image";
+      img.loading = "eager";
+      lbMedia.appendChild(img);
+    }
 
-    // Trigger reveal animation after a tiny delay
-    setTimeout(
-      () => {
-        div.classList.add("visible");
-      },
-      50 + index * 60,
-    );
-
-    return div;
-  }
-
-  // Lightbox
-  function openLightbox(item) {
-    lbTitle.textContent = item.title;
-    lbDesc.textContent = item.desc;
     lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
   }
@@ -220,10 +209,15 @@ ApexApp.initGallery = function initGallery() {
   }
 
   lbClose.addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
   });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("open")) {
+      closeLightbox();
+    }
   });
 };
