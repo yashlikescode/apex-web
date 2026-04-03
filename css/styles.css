@@ -382,7 +382,7 @@ body {
 /* ---- Product cards ---- */
 .product-card {
   background: #fff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #c6c6c7;
   border-radius: 1rem;
   padding: 1.75rem;
   transition: all var(--transition);
@@ -448,11 +448,13 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   transition: all var(--transition);
+    box-shadow: 4px 4px 4px #80808080;
 }
 .partner-card:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   transform: translateY(-3px);
   border-color: #bfdbfe;
+    box-shadow: 8px 8px 8px #80808080;
 }
 .partner-logo-badge {
   background: linear-gradient(135deg, #1a56db, #2563eb);
@@ -555,7 +557,7 @@ body {
 /* ---- Why choose cards ---- */
 .why-card {
   background: #fff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #c6c6c7;
   border-radius: 1rem;
   padding: 1.75rem;
   transition: all var(--transition);
@@ -742,6 +744,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  color: orange;
 }
 .form-input {
   width: 100%;
