@@ -1344,45 +1344,16 @@ footer {
 }
 
 
-/* ---- Trusted Clients Marquee ---- */
-.clients-marquee-outer {
-  overflow: hidden;
-  width: 100%;
-  /* Fade edges */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-}
-
-.clients-marquee-track {
-  display: flex;
+/* ---- Trusted Clients Grid ---- */
+.clients-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 160px);
+  justify-content: center;
   gap: 20px;
-  width: max-content;
-  animation: marqueeScroll 38s linear infinite;
-}
-
-.clients-marquee-outer:hover .clients-marquee-track {
-  animation-play-state: paused;
-}
-
-@keyframes marqueeScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  width: 100%;
 }
 
 .client-logo-item {
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1415,4 +1386,15 @@ footer {
 .client-logo-item:hover img {
   opacity: 1;
   filter: brightness(0) invert(1) sepia(1) saturate(0.5) hue-rotate(0deg);
+}
+
+@media (max-width: 640px) {
+  .clients-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 160px));
+    gap: 14px;
+  }
+
+  .client-logo-item {
+    width: 100%;
+  }
 }
