@@ -90,7 +90,7 @@ const GALLERY_SECTIONS = [
         title: "Office Workspace 2",
       },
       {
-        src: "gallery/office/WhatsApp Image 2026-01-24 at 19.16.34 (1).jpeg",
+        src: "gallery/office/WhatsApp Image 2026-04-22 at 3.41.17 PM.jpeg",
         title: "Office Workspace 3",
       },
       {

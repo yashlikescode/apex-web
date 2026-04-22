@@ -238,7 +238,9 @@ body {
 .hero-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  flex: 1 1 35%;
   padding: 0.45rem 1rem;
   background: rgba(26, 86, 219, 0.15);
   border: 1px solid rgba(26, 86, 219, 0.35);
@@ -344,7 +346,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -448,13 +450,13 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   transition: all var(--transition);
-    box-shadow: 4px 4px 4px #80808080;
+  box-shadow: 4px 4px 4px #80808080;
 }
 .partner-card:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   transform: translateY(-3px);
   border-color: #bfdbfe;
-    box-shadow: 8px 8px 8px #80808080;
+  box-shadow: 8px 8px 8px #80808080;
 }
 .partner-logo-badge {
   background: linear-gradient(135deg, #1a56db, #2563eb);
@@ -625,7 +627,11 @@ body {
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
   background:
-    radial-gradient(circle at top right, rgba(249, 115, 22, 0.08), transparent 28%),
+    radial-gradient(
+      circle at top right,
+      rgba(249, 115, 22, 0.08),
+      transparent 28%
+    ),
     linear-gradient(135deg, #ffffff, #f8fafc);
   box-shadow: 0 14px 40px rgba(15, 31, 61, 0.06);
   align-items: center;
@@ -1254,9 +1260,6 @@ footer {
   }
 }
 
-
-
-
 /* ---- Partner logo image wrappers (replaces text badges) ---- */
 .partner-logo-img-wrap {
   display: flex;
@@ -1284,7 +1287,6 @@ footer {
 .partner-card:hover .partner-logo-img {
   filter: brightness(1.05);
 }
-
 
 /* ---- Component partner logo grid ---- */
 .component-logo-grid {
@@ -1315,7 +1317,9 @@ footer {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
   cursor: default;
 }
 
@@ -1343,7 +1347,6 @@ footer {
   line-height: 1.2;
 }
 
-
 /* ---- Trusted Clients Grid ---- */
 .clients-logo-grid {
   display: grid;
@@ -1363,7 +1366,9 @@ footer {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  transition: background 0.25s ease, border-color 0.25s ease;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .client-logo-item:hover {
@@ -1380,7 +1385,9 @@ footer {
   /* Make all logos appear light/white against dark background */
   filter: brightness(0) invert(1);
   opacity: 0.75;
-  transition: opacity 0.25s ease, filter 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    filter 0.25s ease;
 }
 
 .client-logo-item:hover img {
