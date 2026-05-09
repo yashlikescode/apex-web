@@ -824,6 +824,9 @@
     width: inherit;
     justify-content: center;
 }
+.carousel-thumbnails > * {
+    flex: 1 1 0;
+}
 
 .thumbnail-thumb {
   width: fit-content;
@@ -837,6 +840,7 @@
   padding: 1rem;
   position: relative;
   text-align: left;
+  max-width: 200px;
 }
 
 .thumbnail-thumb:hover {
