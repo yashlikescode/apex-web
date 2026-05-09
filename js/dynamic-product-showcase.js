@@ -3,7 +3,7 @@ const productShowcaseData = {
   pcc: {
     title: "Power Control Centre (PCC)",
     description:
-      "Comprehensive power distribution and control for industrial operations. Built for performance and reliability with advanced protection mechanisms.",
+      "The first point of electrical entry in any facility. Receives high-voltage supply from the utility transformer, houses the main circuit breaker, and distributes power through heavy copper busbars to all downstream panels — MCC, lighting, HVAC, and more. Think of it as the master switchboard of your entire plant or building.",
     images: [
       { name: "PCC Panel -1.png", folder: "1.PCC Panels" },
       { name: "PCC Panel -2.png", folder: "1.PCC Panels" },
@@ -13,7 +13,7 @@ const productShowcaseData = {
   mcc: {
     title: "Motor Control Centre (MCC)",
     description:
-      "Specialized electrical panel for centralized motor control. Each motor receives dedicated drawer with contactor, overload relay, and protective fuses.",
+      "A dedicated panel for starting, stopping, and protecting electric motors. Each motor gets its own drawer with a contactor, overload relay, and fuses — all in one cabinet. Centralized controls make operations safer and maintenance faster. A must-have in any facility with multiple pumps, fans, compressors, or conveyors.",
     images: [
       { name: "MCC Panel -1.png", folder: "2.MCC Panels" },
       { name: "MCC Panel-2.png", folder: "2.MCC Panels" },
@@ -23,7 +23,7 @@ const productShowcaseData = {
   pdb: {
     title: "Power Distribution Board (PDB)",
     description:
-      "Optimal electrical distribution with superior safety and reliability. Designed for commercial and industrial applications with advanced protection.",
+    "A mid-level distribution panel that takes bulk power from the PCC and divides it into individual circuits for different zones, floors, or equipment groups. Each outgoing circuit has its own MCB or MCCB for protection. Think of it as the 'router' of your electrical network — directing the right power to the right place.",
     images: [
       { name: "PDB Panel -1.png", folder: "3.PDB Panels" },
       { name: "PDB Panel -2.png", folder: "3.PDB Panels" },
@@ -33,7 +33,7 @@ const productShowcaseData = {
   ldb: {
     title: "Load Distribution Board (LDB)",
     description:
-      "Complex electrical network management with precision and safety. Provides flexible load sharing, fault isolation, and seamless scalability.",
+    "A purpose-built board exclusively for lighting circuits, kept separate from power circuits for safety and easy fault isolation. A tripped lighting MCB won't affect machines — and vice versa. Sized for lower current loads with individual MCBs per zone. Mandatory in commercial and industrial buildings per IS standards.",
     images: [
       { name: "LDB -3.png", folder: "4.LDB Panel" },
       { name: "LDB Panel -1.png", folder: "4.LDB Panel" },
@@ -43,7 +43,7 @@ const productShowcaseData = {
   vfd: {
     title: "Variable Frequency Drive (VFD)",
     description:
-      "Energy-efficient motor control with intelligent frequency modulation. Reduces energy consumption and extends equipment life with smooth acceleration.",
+    "A VFD controls motor speed by varying the electrical frequency — instead of always running at 100%, motors run at exactly the required speed. This delivers up to 50% energy savings on pumps, fans, and compressors. Internally converts AC → DC → variable AC. Includes soft-start, overload protection, and often eliminates mechanical throttle valves entirely.",
     images: [
       { name: "VFD Panel -1.png", folder: "5.VFD Panel" },
       { name: "VFD Panel -3.png", folder: "5.VFD Panel" },
@@ -53,7 +53,7 @@ const productShowcaseData = {
   sync: {
     title: "Synchronization Panel",
     description:
-      "Seamless parallel operation of multiple generators. Ensures voltage and frequency alignment, minimizing stress and maximizing system reliability.",
+    "When two or more generators need to share load simultaneously, they must match on voltage, frequency, and phase angle before connecting. A synchronization panel monitors and matches all three parameters automatically before closing the breaker. Connecting out-of-sync generators can destroy both machines — this panel prevents that. Essential for DG paralleling and captive power plants.",
     images: [
       { name: "Synchronization P _ 1.png", folder: "6.Snchronization Panel" },
       {
@@ -65,15 +65,13 @@ const productShowcaseData = {
   apfc: {
     title: "Automatic Power Factor Correction (APFC)",
     description:
-      "Optimizes power factor automatically, reducing reactive power consumption. Intelligent correction adapts to load changes for maximum efficiency.",
-    images: [
-      { name: "APFC Panel -1.png", folder: "7.APFC Panel" },
-    ],
+    "Low power factor means hidden penalty charges on your electricity bill. An APFC panel automatically switches capacitor banks in or out to keep power factor near 1.0. The built-in relay controller monitors PF continuously and responds in seconds. Most customers see an 8–15% reduction in electricity bills — the panel typically pays for itself in months.",
+    images: [{ name: "APFC Panel -1.png", folder: "7.APFC Panel" }],
   },
   busduct: {
     title: "Busduct Systems",
     description:
-      "High-capacity power distribution with minimal voltage drop. Modular busduct solutions for flexible routing and efficient installation.",
+    "A prefabricated metal enclosure containing copper or aluminium busbars, used to carry very high currents (400A–6300A) across long distances inside a building. It replaces costly, cumbersome cable runs. Tap-off boxes at regular intervals allow machines to connect without cutting or splicing. Safer, neater, and far easier to expand than traditional multi-cable installations.",
     images: [
       { name: "Busduct -1.png", folder: "8.Busduct" },
       { name: "Busduct -2.png", folder: "8.Busduct" },
@@ -82,17 +80,15 @@ const productShowcaseData = {
     ],
   },
   imcc: {
-    title: "Integrated Motor Control Center (IMCC)",
+    title: "Intelligent Motor Control Center (IMCC)",
     description:
-      "Advanced integrated motor control with comprehensive management features. Combines power distribution and motor protection in one unit.",
-    images: [
-      { name: "IMCC panel -1.png", folder: "9.IMCC" },
-    ],
+    "An IMCC is a traditional MCC upgraded with digital intelligence. Smart relays in each drawer report motor current, voltage, temperature, and faults digitally over Modbus or Profibus to a PLC. All data is visible on an HMI or SCADA screen in real time. Enables remote start/stop, predictive maintenance alerts, and energy logging — the foundation of an Industry 4.0 facility.",
+    images: [{ name: "IMCC panel -1.png", folder: "9.IMCC" }],
   },
   ups: {
     title: "Industrial UPS",
     description:
-      "Uninterruptible Power Supply for critical industrial applications. Reliable backup power ensuring continuous operation during power disruptions.",
+    "An Industrial UPS protects critical equipment from power cuts, surges, sags, and harmonics. Unlike home UPS units, industrial variants use online double-conversion — power always flows through the battery circuit, giving zero switchover delay during a blackout. Built for harsh environments: wide temperature tolerance, high IP protection, and extended battery autonomy for long outages.",
     images: [
       { name: "UPS-1.jpeg", folder: "10.Industrial UPS" },
       { name: "Vertive UPS-2.jpeg", folder: "10.Industrial UPS" },

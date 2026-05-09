@@ -86,12 +86,22 @@
 
           <!-- Desktop nav links -->
           <ul class="hidden lg:flex items-center gap-7 list-none">
-            <li><a class="nav-link" href="#home">Home</a></li>
             <li><a class="nav-link" href="#about">About</a></li>
             <li><a class="nav-link" href="#products">Products</a></li>
             <li><a class="nav-link" href="#partners">Partners</a></li>
             <li>
-              <a class="nav-link" href="#certifications">Certifications</a>
+              <a
+                class="nav-link"
+                onclick="goToCertifications()"
+                id="certifications-tab"
+                href="#certifications"
+                >Certifications</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" onclick="goToProjects()" href="#cert-dir"
+                >Projects</a
+              >
             </li>
             <li><a class="nav-link" href="#industries">Industries</a></li>
             <li><a class="nav-link" href="#clients">Clients</a></li>
@@ -160,6 +170,12 @@
             href="#certifications"
             role="menuitem"
             >Certifications</a
+          >
+          <a
+            class="nav-link block py-2.5 text-sm"
+            href="#projects"
+            role="menuitem"
+            >Projects</a
           >
           <a
             class="nav-link block py-2.5 text-sm"
@@ -459,7 +475,10 @@
       aria-label="About Apex Marketing"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div
+          style="place-items: start"
+          class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        >
           <!-- Text content -->
           <div>
             <div class="section-tag reveal">About Us</div>
@@ -491,63 +510,171 @@
               >
               <a href="#contact" class="btn-primary text-sm">Get a Quote</a>
             </div>
+            <!-- SECTION 2: APPROVALS & QUALITY -->
+            <div
+              class="trust-section-label mt-12 w-full text-center p-[0.5rem]"
+            >
+              Approvals &amp; Quality
+            </div>
+
+            <div class="trust-tier trust-tier-approvals">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="trust-card trust-card-approval">
+                  <div class="trust-icon trust-icon-approval">✓</div>
+                  <p class="trust-approval-title">ISO 9001:2015</p>
+                  <p class="trust-approval-subtitle">
+                    Quality Management System
+                  </p>
+                </div>
+                <div class="trust-card trust-card-approval">
+                  <div class="trust-icon trust-icon-approval">✓</div>
+                  <p class="trust-approval-title">CPRI Tested</p>
+                  <p class="trust-approval-subtitle">
+                    Certified &amp; Verified
+                  </p>
+                </div>
+                <div class="trust-card trust-card-approval">
+                  <div class="trust-icon trust-icon-approval">✓</div>
+                  <p class="trust-approval-title">SAIL Approved</p>
+                  <p class="trust-approval-subtitle">CET Certification</p>
+                </div>
+                <div class="trust-card trust-card-approval">
+                  <div class="trust-icon trust-icon-approval">✓</div>
+                  <p class="trust-approval-title">TATA Steel</p>
+                  <p class="trust-approval-subtitle">Approved Supplier</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Visual cards -->
-          <div class="grid grid-cols-2 gap-4 reveal-right stagger-2">
-            <div
-              class="rounded-xl p-5 text-white col-span-2"
-              style="
-                background: linear-gradient(135deg, #0a1628, #102141);
-                border: 1px solid #1e3a5f;
-              "
-            >
-              <div class="text-4xl mb-3">⚡</div>
-              <h3 class="font-bold text-lg mb-2">
-                Siemens - SIEPAN Licensed Partner
-              </h3>
-              <p class="text-sm" style="color: rgba(255, 255, 255, 0.65)">
-                Authorised by Siemens Limited for the manufacturing of
-                low-voltage switchboards compliant with IEC 61439-1&amp;2.
-              </p>
+          <!-- Trust Showcase - Premium Enterprise Style -->
+          <div class="trust-showcase reveal-right stagger-2 mt-[3.7rem]">
+            <!-- TIER 1: PRIMARY PARTNER - SIEMENS -->
+            <div class="trust-tier trust-tier-1">
+              <div class="trust-card trust-card-premium">
+                <div class="trust-card-header">
+                  <img
+                    src="images/partners/Logo-Siemesn.png"
+                    alt="Siemens"
+                    class="trust-logo trust-logo-primary h-[4.7rem]"
+                  />
+                  <div class="trust-badge-tier">Primary</div>
+                </div>
+                <h3 class="trust-title trust-title-lg">
+                  Siemens – SIEPAN Licensed Partner
+                </h3>
+                <p class="trust-subtitle">Global Technology Leader</p>
+                <p class="trust-description">
+                  Authorised by Siemens Limited for manufacturing of low-voltage
+                  switchboards compliant with
+                  <strong>IEC 61439-1&amp;2:2020</strong> standards.
+                </p>
+                <div class="trust-divider"></div>
+                <ul class="trust-highlights">
+                  <li>
+                    <span class="trust-check">✓</span> Elite Partnership Status
+                  </li>
+                  <li>
+                    <span class="trust-check">✓</span> IEC Certified
+                    Manufacturing
+                  </li>
+                  <li>
+                    <span class="trust-check">✓</span> Global Engineering
+                    Excellence
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div
-              class="rounded-xl p-5 border border-gray-100"
-              style="background: #fafafa"
-            >
-              <div class="text-3xl mb-2">🏆</div>
-              <p class="font-bold text-gray-800 text-sm">ISO 9001:2015</p>
-              <p class="text-xs text-gray-500 mt-0.5">
-                Quality Management System
-              </p>
+
+            <!-- TIER 2: SECONDARY PARTNERS -->
+            <div class="trust-tier trust-tier-2">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="trust-card trust-card-secondary">
+                  <div class="trust-card-header">
+                    <img
+                      src="images/partners/Logo_L_K.jpg"
+                      alt="Lauritz Knudsen"
+                      class="trust-logo trust-logo-secondary"
+                    />
+                  </div>
+                  <h3 class="trust-title">
+                    L&amp;K – Integral Solution Provider
+                  </h3>
+                  <p class="trust-caption">Automation &amp; Control Systems</p>
+                  <div class="trust-dot-divider"></div>
+                  <p class="trust-small-text">
+                    Authorised solution integrator for mission-critical
+                    applications
+                  </p>
+                </div>
+                <div class="trust-card trust-card-secondary">
+                  <div class="trust-card-header">
+                    <img
+                      src="images/partners/Logo_-_EATON.png"
+                      alt="Eaton"
+                      class="trust-logo trust-logo-secondary"
+                    />
+                  </div>
+                  <h3 class="trust-title">Eaton – Channel Partner</h3>
+                  <p class="trust-caption">Power Distribution &amp; Control</p>
+                  <div class="trust-dot-divider"></div>
+                  <p class="trust-small-text">
+                    Premium component integration &amp; system design
+                  </p>
+                </div>
+              </div>
             </div>
-            <div
-              class="rounded-xl p-5 border border-gray-100"
-              style="background: #fafafa"
-            >
-              <div class="text-3xl mb-2">🔬</div>
-              <p class="font-bold text-gray-800 text-sm">CPRI Tested</p>
-              <p class="text-xs text-gray-500 mt-0.5">
-                Short circuit, thermal &amp; IP tested
-              </p>
-            </div>
-            <div
-              class="rounded-xl p-5 border border-gray-100"
-              style="background: #fafafa"
-            >
-              <div class="text-3xl mb-2">📍</div>
-              <p class="font-bold text-gray-800 text-sm">Jamshedpur, JH</p>
-              <p class="text-xs text-gray-500 mt-0.5">East Singhbhum, India</p>
-            </div>
-            <div
-              class="rounded-xl p-5 border border-gray-100"
-              style="background: #fafafa"
-            >
-              <div class="text-3xl mb-2">🤝</div>
-              <p class="font-bold text-gray-800 text-sm">Yaskawa Partner</p>
-              <p class="text-xs text-gray-500 mt-0.5">
-                Authorised Business Partner
-              </p>
+
+            <!-- TIER 3: TECHNOLOGY PARTNERS -->
+            <div class="trust-tier trust-tier-3">
+              <div class="grid grid-cols-3 gap-3">
+                <div class="trust-card trust-card-compact">
+                  <img
+                    src="images/partners/Yashkawa_logo.png"
+                    alt="Yaskawa"
+                    class="trust-logo trust-logo-compact"
+                  />
+                  <p class="trust-partner-role">Drive Technology</p>
+                </div>
+                <div class="trust-card trust-card-compact">
+                  <img
+                    src="images/partners/delta.png"
+                    alt="Delta"
+                    class="trust-logo trust-logo-compact"
+                  />
+                  <p class="trust-partner-role"> Delta Power Solutions</p>
+                </div>
+                <div class="trust-card trust-card-compact">
+                  <img
+                    src="images/partners/Logo-_Wago.png"
+                    alt="WAGO"
+                    class="trust-logo trust-logo-compact"
+                  />
+                  <p class="trust-partner-role">Connectivity</p>
+                </div>
+                <div class="trust-card trust-card-compact">
+                  <img
+                    src="images/partners/cape.png"
+                    alt="CAPE Electrical"
+                    class="trust-logo trust-logo-compact"
+                  />
+                  <p class="trust-partner-role">Components</p>
+                </div>
+                <div class="trust-card trust-card-compact">
+                  <img
+                    src="images/partners/vertive.png"
+                    alt="Vertiv"
+                    class="trust-logo trust-logo-compact"
+                  />
+                  <p class="trust-partner-role">Vertiv Industrial UPS</p>
+                </div>
+                <div class="trust-card trust-card-compact">
+                  <div class="trust-logo-placeholder trust-logo-compact">
+                    📍
+                  </div>
+                  <p class="trust-partner-role">Location: Jamshedpur, JH</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -564,20 +691,19 @@
       aria-label="Our products"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Header -->
+        <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <div class="section-tag justify-center reveal">
-            Our Products
-          </div>
+          <div class="section-tag justify-center reveal">Our Products</div>
 
           <h2 class="section-title mt-2 mb-4 reveal stagger-1">
             Engineered for Reliable Power Distribution
           </h2>
 
           <p class="section-desc mx-auto reveal stagger-2">
-            Our comprehensive range of electrical panels and power management solutions
-            is designed to deliver safety, efficiency, and long-term reliability across
-            industrial, commercial, and infrastructure applications.
+            Our comprehensive range of electrical panels and power management
+            solutions is designed to deliver safety, efficiency, and long-term
+            reliability across industrial, commercial, and infrastructure
+            applications.
           </p>
         </div>
         <!-- Dynamic Product Showcase Section -->
@@ -873,37 +999,15 @@
 
         <!-- Test Reports Comparison Table -->
         <!-- ── Certificate Directory Table ── -->
-        <div class="cert-dir-wrap reveal mt-10">
+        <div class="cert-dir-wrap reveal mt-10" id="cert-dir">
           <!-- Tab bar -->
           <div class="cert-dir-tabs" role="tablist">
-            <button
-              class="cert-dir-tab active"
-              data-tab="quality"
-              role="tab"
-              aria-selected="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                />
-              </svg>
-              Quality &amp; Registrations
-              <span class="cert-dir-count">3</span>
-            </button>
             <button
               class="cert-dir-tab"
               data-tab="partners"
               role="tab"
               aria-selected="false"
+              id="partners-tab"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -922,6 +1026,32 @@
               Partner Certificates
               <span class="cert-dir-count">5</span>
             </button>
+
+            <button
+              class="cert-dir-tab"
+              data-tab="projects"
+              role="tab"
+              aria-selected="false"
+              id="projects-tab"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                />
+              </svg>
+              Major Projects
+              <span class="cert-dir-count">42</span>
+            </button>
+
             <button
               class="cert-dir-tab"
               data-tab="cpri"
@@ -946,10 +1076,10 @@
               <span class="cert-dir-count">7</span>
             </button>
             <button
-              class="cert-dir-tab"
-              data-tab="projects"
+              class="cert-dir-tab active"
+              data-tab="quality"
               role="tab"
-              aria-selected="false"
+              aria-selected="true"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -962,11 +1092,11 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                 />
               </svg>
-              Major Projects
-              <span class="cert-dir-count">42</span>
+              Quality &amp; Registrations
+              <span class="cert-dir-count">3</span>
             </button>
           </div>
 
@@ -2433,45 +2563,45 @@
           </div>
 
           <!-- Contact form col -->
-<!-- EmailJS SDK -->
-<script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-></script>
+          <!-- EmailJS SDK -->
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+          ></script>
 
-<script>
-  // Initialize EmailJS
-  (function () {
-    emailjs.init({
-      publicKey: "26M9_wMslGrbqgn1p",
-    });
-  })();
+          <script>
+            // Initialize EmailJS
+            (function () {
+              emailjs.init({
+                publicKey: "26M9_wMslGrbqgn1p",
+              });
+            })();
 
-  // Handle Form Submit
-  window.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const submitBtn = form.querySelector('button[type="submit"]');
+            // Handle Form Submit
+            window.addEventListener("DOMContentLoaded", function () {
+              const form = document.getElementById("contact-form");
+              const submitBtn = form.querySelector('button[type="submit"]');
 
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+              form.addEventListener("submit", function (event) {
+                event.preventDefault();
 
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = "Sending...";
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = "Sending...";
 
-      emailjs
-        .sendForm(
-          "service_zylc8pl", // EmailJS Service ID
-          "template_47q5pgk", // EmailJS Template ID
-          form
-        )
-        .then(
-          function () {
-            submitBtn.innerHTML = "Message Sent Successfully!";
-            form.reset();
+                emailjs
+                  .sendForm(
+                    "service_zylc8pl", // EmailJS Service ID
+                    "template_47q5pgk", // EmailJS Template ID
+                    form,
+                  )
+                  .then(
+                    function () {
+                      submitBtn.innerHTML = "Message Sent Successfully!";
+                      form.reset();
 
-            setTimeout(() => {
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = `
+                      setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = `
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="w-5 h-5"
@@ -2488,224 +2618,219 @@
                 </svg>
                 Send Message
               `;
-            }, 3000);
-          },
-          function (error) {
-            console.log("FAILED...", error);
+                      }, 3000);
+                    },
+                    function (error) {
+                      console.log("FAILED...", error);
 
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = "Failed to Send";
-          }
-        );
-    });
-  });
-</script>
+                      submitBtn.disabled = false;
+                      submitBtn.innerHTML = "Failed to Send";
+                    },
+                  );
+              });
+            });
+          </script>
 
-<div class="lg:col-span-3 reveal-right">
-  <div
-    class="rounded-2xl p-6 lg:p-8"
-    style="
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    "
-  >
-    <h3 class="text-white font-bold text-xl mb-6">
-      Send Us a Message
-    </h3>
+          <div class="lg:col-span-3 reveal-right">
+            <div
+              class="rounded-2xl p-6 lg:p-8"
+              style="
+                background: rgba(255, 255, 255, 0.04);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              "
+            >
+              <h3 class="text-white font-bold text-xl mb-6">
+                Send Us a Message
+              </h3>
 
-    <form id="contact-form" novalidate>
-      <!-- Hidden Time Field -->
-      <input
-        type="hidden"
-        name="time"
-        value=""
-        id="form-time"
-      />
+              <form id="contact-form" novalidate>
+                <!-- Hidden Time Field -->
+                <input type="hidden" name="time" value="" id="form-time" />
 
-      <div class="grid sm:grid-cols-2 gap-4 mb-4">
-        <div>
-          <label class="form-label text-white/80" for="name">
-            Your Name <span class="text-orange-400">*</span>
-          </label>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="form-label text-white/80" for="name">
+                      Your Name <span class="text-orange-400">*</span>
+                    </label>
 
-          <input
-            id="name"
-            name="name"
-            type="text"
-            class="form-input"
-            placeholder="Full Name"
-            required
-          />
-        </div>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="form-input"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
 
-        <div>
-          <label class="form-label text-white/80" for="company">
-            Company Name <span class="text-orange-400">*</span>
-          </label>
+                  <div>
+                    <label class="form-label text-white/80" for="company">
+                      Company Name <span class="text-orange-400">*</span>
+                    </label>
 
-          <input
-            id="company"
-            name="company"
-            type="text"
-            class="form-input"
-            placeholder="Your Company"
-            required
-          />
-        </div>
-      </div>
+                    <input
+                      id="company"
+                      name="company"
+                      type="text"
+                      class="form-input"
+                      placeholder="Your Company"
+                      required
+                    />
+                  </div>
+                </div>
 
-      <div class="grid sm:grid-cols-2 gap-4 mb-4">
-        <div>
-          <label class="form-label text-white/80" for="email">
-            Email Address <span class="text-orange-400">*</span>
-          </label>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="form-label text-white/80" for="email">
+                      Email Address <span class="text-orange-400">*</span>
+                    </label>
 
-          <input
-            id="email"
-            name="email"
-            type="email"
-            class="form-input"
-            placeholder="you@company.com"
-            required
-          />
-        </div>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      class="form-input"
+                      placeholder="you@company.com"
+                      required
+                    />
+                  </div>
 
-        <div>
-          <label class="form-label text-white/80" for="phone">
-            Phone Number <span class="text-orange-400">*</span>
-          </label>
+                  <div>
+                    <label class="form-label text-white/80" for="phone">
+                      Phone Number <span class="text-orange-400">*</span>
+                    </label>
 
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            class="form-input"
-            placeholder="+91 XXXXX XXXXX"
-            required
-          />
-        </div>
-      </div>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      class="form-input"
+                      placeholder="+91 XXXXX XXXXX"
+                      required
+                    />
+                  </div>
+                </div>
 
-      <div class="grid sm:grid-cols-2 gap-4 mb-4">
-        <div>
-          <label class="form-label text-white/80" for="industry">
-            Industry / Sector
-          </label>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="form-label text-white/80" for="industry">
+                      Industry / Sector
+                    </label>
 
-          <select id="industry" name="industry" class="form-input">
-            <option value="">Select Industry</option>
-            <option>Manufacturing & Heavy Industries</option>
-            <option>Infrastructure & Construction</option>
-            <option>Power Generation & Distribution</option>
-            <option>Commercial & Real Estate</option>
-            <option>Healthcare & Pharmaceuticals</option>
-            <option>Water Treatment & Utilities</option>
-            <option>Educational Institutions</option>
-            <option>Hospitality & Hotels</option>
-            <option>Oil & Gas</option>
-            <option>Other</option>
-          </select>
-        </div>
+                    <select id="industry" name="industry" class="form-input">
+                      <option value="">Select Industry</option>
+                      <option>Manufacturing & Heavy Industries</option>
+                      <option>Infrastructure & Construction</option>
+                      <option>Power Generation & Distribution</option>
+                      <option>Commercial & Real Estate</option>
+                      <option>Healthcare & Pharmaceuticals</option>
+                      <option>Water Treatment & Utilities</option>
+                      <option>Educational Institutions</option>
+                      <option>Hospitality & Hotels</option>
+                      <option>Oil & Gas</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
 
-        <div>
-          <label class="form-label text-white/80" for="product">
-            Product Interest
-          </label>
+                  <div>
+                    <label class="form-label text-white/80" for="product">
+                      Product Interest
+                    </label>
 
-          <select id="product" name="product" class="form-input">
-            <option value="">Select Product</option>
-            <option>LT Panels</option>
-            <option>Control Panels</option>
-            <option>VFD Panels</option>
-            <option>Distribution Boards</option>
-            <option>Outdoor Panels</option>
-            <option>Custom Solution</option>
-            <option>Spares & Components</option>
-          </select>
-        </div>
-      </div>
+                    <select id="product" name="product" class="form-input">
+                      <option value="">Select Product</option>
+                      <option>LT Panels</option>
+                      <option>Control Panels</option>
+                      <option>VFD Panels</option>
+                      <option>Distribution Boards</option>
+                      <option>Outdoor Panels</option>
+                      <option>Custom Solution</option>
+                      <option>Spares & Components</option>
+                    </select>
+                  </div>
+                </div>
 
-      <div class="mb-4">
-        <label class="form-label text-white/80" for="message">
-          Message / Requirements
-          <span class="text-orange-400">*</span>
-        </label>
+                <div class="mb-4">
+                  <label class="form-label text-white/80" for="message">
+                    Message / Requirements
+                    <span class="text-orange-400">*</span>
+                  </label>
 
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          class="form-input"
-          placeholder="Describe your requirement, project scope, or any specific technical details…"
-          required
-        ></textarea>
-      </div>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="form-input"
+                    placeholder="Describe your requirement, project scope, or any specific technical details…"
+                    required
+                  ></textarea>
+                </div>
 
-      <div class="mb-6">
-        <label class="form-label text-white/80 mb-2">
-          Preferred Contact Method
-        </label>
+                <div class="mb-6">
+                  <label class="form-label text-white/80 mb-2">
+                    Preferred Contact Method
+                  </label>
 
-        <div class="flex gap-4">
-          <label
-            class="flex items-center gap-2 text-sm cursor-pointer"
-            style="color: rgba(255, 255, 255, 0.7)"
-          >
-            <input
-              type="radio"
-              name="contact_method"
-              value="email"
-              checked
-              class="accent-orange-500"
-            />
-            Email
-          </label>
+                  <div class="flex gap-4">
+                    <label
+                      class="flex items-center gap-2 text-sm cursor-pointer"
+                      style="color: rgba(255, 255, 255, 0.7)"
+                    >
+                      <input
+                        type="radio"
+                        name="contact_method"
+                        value="email"
+                        checked
+                        class="accent-orange-500"
+                      />
+                      Email
+                    </label>
 
-          <label
-            class="flex items-center gap-2 text-sm cursor-pointer"
-            style="color: rgba(255, 255, 255, 0.7)"
-          >
-            <input
-              type="radio"
-              name="contact_method"
-              value="phone"
-              class="accent-orange-500"
-            />
-            Phone
-          </label>
-        </div>
-      </div>
+                    <label
+                      class="flex items-center gap-2 text-sm cursor-pointer"
+                      style="color: rgba(255, 255, 255, 0.7)"
+                    >
+                      <input
+                        type="radio"
+                        name="contact_method"
+                        value="phone"
+                        class="accent-orange-500"
+                      />
+                      Phone
+                    </label>
+                  </div>
+                </div>
 
-      <button
-        type="submit"
-        class="btn-primary w-full justify-center text-base py-3"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-5 h-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-          />
-        </svg>
+                <button
+                  type="submit"
+                  class="btn-primary w-full justify-center text-base py-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                    />
+                  </svg>
 
-        Send Message
-      </button>
-    </form>
-  </div>
-</div>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
 
-<script>
-  // Set Current Time Automatically
-  document.getElementById("form-time").value =
-    new Date().toLocaleString();
-</script>
+          <script>
+            // Set Current Time Automatically
+            document.getElementById("form-time").value =
+              new Date().toLocaleString();
+          </script>
         </div>
       </div>
     </section>

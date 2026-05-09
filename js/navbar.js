@@ -49,6 +49,14 @@ ApexApp.initNavbar = function initNavbar() {
       if (window.scrollY >= top) currentId = section.id;
     });
 
+    // If on certifications section and projects tab is open, highlight projects link instead
+    if (currentId === "certifications") {
+      const projectsTab = document.getElementById("projects-tab");
+      if (projectsTab && projectsTab.classList.contains("active")) {
+        currentId = "cert-dir";
+      }
+    }
+
     navLinks.forEach((link) => {
       link.classList.remove("active-link");
       if (link.getAttribute("href") === `#${currentId}`) {

@@ -28,3 +28,13 @@ document.querySelectorAll(".cert-dir-tab").forEach((tab) => {
       .classList.add("active");
   });
 });
+
+function goToProjects() {
+  const projectsTab = document.getElementById("projects-tab");
+  projectsTab.click();
+}
+
+function goToCertifications() {
+  const certTab = document.getElementById("partners-tab");
+  certTab.click();
+}
