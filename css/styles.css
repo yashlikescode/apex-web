@@ -997,7 +997,7 @@ footer {
   }
   .btn-primary,
   .btn-secondary {
-    padding: 0.7rem 1.3rem;
+    padding: 0.5rem 0.7rem;
     font-size: 0.875rem;
   }
   .stat-divider {
@@ -1050,7 +1050,6 @@ footer {
   gap: 0;
   border-bottom: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
-  overflow-x: scroll;
 }
 .cert-dir-tab {
   display: inline-flex;
@@ -1840,6 +1839,9 @@ footer {
   .trust-description {
     font-size: 0.8rem;
     margin: 0.5rem 0;
+  }
+  .cert-dir-tabs {
+    overflow-x: scroll;
   }
 }
 
