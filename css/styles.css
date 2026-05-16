@@ -23,7 +23,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -102,6 +102,7 @@ body {
   transition:
     background var(--transition),
     box-shadow var(--transition);
+  width: 100vw;
 }
 #navbar.scrolled {
   background: rgba(10, 22, 40, 0.97);
@@ -750,15 +751,15 @@ body {
   );
 }
 .gallery-photo-label {
-    font-size: 0.7rem;
-    /* font-weight: 600; */
-    color: #ffffff;
-    line-height: 1.4;
-    border: solid 1px white;
-    padding: 0.2rem 0.6rem 0.1rem 0.6rem;
-    border-radius: 1rem;
-    background: #00000045;
-    opacity: 0.8;
+  font-size: 0.7rem;
+  /* font-weight: 600; */
+  color: #ffffff;
+  line-height: 1.4;
+  border: solid 1px white;
+  padding: 0.2rem 0.6rem 0.1rem 0.6rem;
+  border-radius: 1rem;
+  background: #00000045;
+  opacity: 0.8;
 }
 .gallery-photo-card:hover .gallery-photo-image,
 .gallery-photo-card:focus-visible .gallery-photo-image {
@@ -1046,10 +1047,10 @@ footer {
 /* Tabs */
 .cert-dir-tabs {
   display: flex;
-  flex-wrap: wrap;
   gap: 0;
   border-bottom: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
+  overflow-x: scroll;
 }
 .cert-dir-tab {
   display: inline-flex;
@@ -1298,7 +1299,7 @@ footer {
 /* ---- Component partner logo grid ---- */
 .component-logo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
@@ -1897,6 +1898,6 @@ footer {
   }
 
   .client-logo-item {
-    width: 100%;
+    width: 40%;
   }
 }
