@@ -73,10 +73,10 @@ const productShowcaseData = {
     description:
     "A prefabricated metal enclosure containing copper or aluminium busbars, used to carry very high currents (400A–6300A) across long distances inside a building. It replaces costly, cumbersome cable runs. Tap-off boxes at regular intervals allow machines to connect without cutting or splicing. Safer, neater, and far easier to expand than traditional multi-cable installations.",
     images: [
-      { name: "Busduct -1.png", folder: "8.Busduct" },
-      { name: "Busduct -2.png", folder: "8.Busduct" },
-      { name: "Busdutc-3.png", folder: "8.Busduct" },
-      { name: "Bust Duct-4.png", folder: "8.Busduct" },
+      // { name: "Busduct -1.png", folder: "8.Busduct" },
+      // { name: "Busduct -2.png", folder: "8.Busduct" },
+      // { name: "Busdutc-3.png", folder: "8.Busduct" },
+      // { name: "Bust Duct-4.png", folder: "8.Busduct" },
     ],
   },
   imcc: {
