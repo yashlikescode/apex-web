@@ -266,7 +266,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   background: var(--orange);
-  color: #fff;
+  color: #000000;
   font-weight: 600;
   padding: 0.8rem 1.8rem;
   border-radius: 0.5rem;
@@ -1678,7 +1678,7 @@ footer {
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #6b7280;
+  color: #6B7280;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 0.8rem;

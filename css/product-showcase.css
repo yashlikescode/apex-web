@@ -664,7 +664,7 @@
 
 .product-tab.active {
   background: #f97316;
-  color: #fff;
+  color: #000000;
   border-color: #f97316;
   box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }

@@ -25,12 +25,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&family=Syne:wght@400;600;700&display=swap"
-      rel="stylesheet"
+      onload="this.rel = 'stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&family=Syne:wght@400;600;700&display=swap"
+      />
+    </noscript>
 
     <!-- Tailwind CSS Play CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
     <script>
       tailwind.config = {
         theme: {
@@ -48,10 +56,19 @@
         },
       };
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/product-showcase.css" />
+    <link
+      rel="preload"
+      as="style"
+      href="css/product-showcase.css"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/product-showcase.css" />
+    </noscript>
   </head>
   <body class="font-sans antialiased">
     <!-- ========================================================
@@ -195,7 +212,7 @@
             role="menuitem"
             >Gallery</a
           >
-          <a href="#contact" class="btn-primary mt-3 text-sm justify-center"
+          <a href="#contact" class="btn-primary mt-3 text-sm justify-center" role="menuitem"
             >Contact Us</a
           >
         </div>
@@ -591,7 +608,7 @@
                 <div class="trust-card trust-card-secondary">
                   <div class="trust-card-header">
                     <img
-                      src="images/partners/Logo_L_K.jpg"
+                      src="images/partners/Logo_L_K.webp"
                       alt="Lauritz Knudsen"
                       class="trust-logo trust-logo-secondary"
                     />
@@ -609,7 +626,7 @@
                 <div class="trust-card trust-card-secondary">
                   <div class="trust-card-header">
                     <img
-                      src="images/partners/Logo_-_EATON.png"
+                      src="images/partners/Logo_-_EATON.webp"
                       alt="Eaton"
                       class="trust-logo trust-logo-secondary"
                     />
@@ -709,74 +726,114 @@
         <div class="product-showcase-dynamic">
           <!-- Product Tab Navigation -->
           <div class="product-tabs-container">
-            <div class="product-tabs-scroll">
+            <div class="product-tabs-scroll" role="tablist" aria-label="Product categories">
               <button
+                id="product-tab-pcc"
                 class="product-tab active"
-                data-product="pcc"
+                role="tab"
                 aria-selected="true"
+                aria-controls="product-panel"
+                tabindex="0"
+                data-product="pcc"
               >
                 <span>PCC Panels</span>
               </button>
               <button
+                id="product-tab-mcc"
                 class="product-tab"
-                data-product="mcc"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="mcc"
               >
                 <span>MCC Panels</span>
               </button>
               <button
+                id="product-tab-pdb"
                 class="product-tab"
-                data-product="pdb"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="pdb"
               >
                 <span>PDB Panels</span>
               </button>
               <button
+                id="product-tab-ldb"
                 class="product-tab"
-                data-product="ldb"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="ldb"
               >
                 <span>LDB Panel</span>
               </button>
               <button
+                id="product-tab-vfd"
                 class="product-tab"
-                data-product="vfd"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="vfd"
               >
                 <span>VFD Panel</span>
               </button>
               <button
+                id="product-tab-sync"
                 class="product-tab"
-                data-product="sync"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="sync"
               >
                 <span>Synchronization Panel</span>
               </button>
               <button
+                id="product-tab-apfc"
                 class="product-tab"
-                data-product="apfc"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="apfc"
               >
                 <span>APFC Panel</span>
               </button>
               <button
+                id="product-tab-busduct"
                 class="product-tab"
-                data-product="busduct"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="busduct"
               >
                 <span>Busduct</span>
               </button>
               <button
+                id="product-tab-imcc"
                 class="product-tab"
-                data-product="imcc"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="imcc"
               >
                 <span>IMCC</span>
               </button>
               <button
+                id="product-tab-ups"
                 class="product-tab"
-                data-product="ups"
+                role="tab"
                 aria-selected="false"
+                aria-controls="product-panel"
+                tabindex="-1"
+                data-product="ups"
               >
                 <span>Industrial UPS</span>
               </button>
@@ -786,7 +843,7 @@
           <!-- Dynamic Product Content -->
           <div class="product-content-wrapper">
             <!-- Content container for dynamic updates -->
-            <div id="product-content" class="product-content">
+            <div id="product-panel" class="product-content" role="tabpanel" aria-labelledby="product-tab-pcc">
               <!-- Content will be dynamically inserted here by JavaScript -->
             </div>
           </div>
@@ -924,7 +981,7 @@
               <div>
                 <div class="partner-logo-img-wrap">
                   <img
-                    src="images/partners/Logo_L_K.jpg"
+                    src="images/partners/Logo_L_K.webp"
                     alt="Lauritz Knudsen"
                     class="partner-logo-img"
                   />
@@ -968,7 +1025,7 @@
               <div>
                 <div class="partner-logo-img-wrap">
                   <img
-                    src="images/partners/Logo_-_EATON.png"
+                    src="images/partners/Logo_-_EATON.webp"
                     alt="Eaton"
                     class="partner-logo-img"
                   />
@@ -1030,13 +1087,13 @@
             </div>
             <div class="component-logo-item">
               <img
-                src="images/partners/ISO_9001-2015.png"
+                src="images/partners/ISO_9001-2015.webp"
                 alt="ISO 9001:2015"
               />
               <span>ISO 9001:2015</span>
             </div>
             <div class="component-logo-item">
-              <img src="images/partners/LOGO-CPRI_Logo.jpeg" alt="CPRI" />
+              <img src="images/partners/LOGO-CPRI_Logo.webp" alt="CPRI" />
               <span>CPRI Tested</span>
             </div>
           </div>
@@ -2858,7 +2915,7 @@
         >
           🔧
         </div>
-        <h3 id="lb-title" class="text-white font-bold text-xl mb-2"></h3>
+        <h3 id="lb-title" class="text-white font-bold text-xl mb-2">Image preview</h3>
         <p
           id="lb-desc"
           class="text-sm mb-6"
@@ -2895,12 +2952,12 @@
     </style>
 
     <!-- JavaScript modules (plain scripts, no bundler needed) -->
-    <script src="js/navbar.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/product-showcase.js"></script>
-    <script src="js/dynamic-product-showcase.js"></script>
+    <script defer src="js/navbar.js"></script>
+    <script defer src="js/animations.js"></script>
+    <script defer src="js/gallery.js"></script>
+    <script defer src="js/contact.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/product-showcase.js"></script>
+    <script defer src="js/dynamic-product-showcase.js"></script>
   </body>
 </html>
